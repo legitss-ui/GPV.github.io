@@ -1286,52 +1286,6 @@ button {
     margin-right: 6px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-logo {
-        justify-content: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-
-    .footer-icons {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-
-
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-    #acerca-de-nosotros {
-        padding: 70px 6%;
-    }
-
-    .acerca-encabezado h1 {
-        font-size: 2.2rem;
-    }
-
-    .acerca-encabezado h2 {
-        font-size: 1.4rem;
-    }
-
-    .acerca-descripcion h2 {
-        font-size: 1.6rem;
-    }
-
-    .valor-item,
-    .estadistica-item {
-        padding: 25px 20px;
-    }
-}
 
 @keyframes moveGradient {
     0% {
@@ -1358,4 +1312,188 @@ button {
         color: rgb(35, 35, 200);
         font-size: 20px;
     }
+
+}
+
+
+
+/* ===========================
+   RESPONSIVE: CELULARES (GEN)
+   =========================== */
+@media (max-width: 768px) {
+  /* header apilado y más alto para toque cómodo */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    min-height: auto;
+  }
+
+  .logo_header {
+    gap: 8px;
+  }
+  .logo_header h1 { font-size: 1.5rem; }
+  .logo_header p  { font-size: 0.9rem; }
+
+  /* menú vertical y fácil de tocar */
+  header .navbar ul {
+    flex-direction: column;
+    gap: 8px;
+    padding: 6px 0;
+  }
+  header .navbar ul li a {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 8px 10px;
+  }
+
+  /* iconos */
+  .iconos_header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+  }
+  .iconos_header a, .iconos_header p { font-size: 0.95rem; }
+
+  /* banner: columna, textos y botones ajustados */
+  .banner {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+  .contenido_banner {
+    text-align: center;
+    gap: 10px;
+  }
+  .contenido_banner h1 { font-size: 1.6rem; line-height: 1.15; }
+  .contenido_banner h3 { font-size: 0.95rem; }
+  .contenido_banner p { font-size: 0.9rem; }
+
+  .botones_banner { flex-direction: column; width: 100%; gap: 10px; align-items: center; }
+  .botones_banner a {
+    width: 90%;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+
+  /* imagenes banner: que la imagen tenga espacio y cards debajo */
+  .imagenes_banner {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+  }
+  .imagenes_banner img {
+    border-radius: 12px;
+    max-height: 260px;
+    object-fit: cover;
+  }
+  .imagenes_banner .card {
+    position: static;
+    display: inline-block;
+    margin: 10px 6px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  }
+
+  /* servicios: una columna, tarjetas más compactas */
+  .servicios {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 18px;
+  }
+  .servicio-card img { height: 180px; }
+  .servicio-contenido { padding: 14px; }
+
+  /* servicios adicionales */
+  .cart-servicios-adicionales {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  .cart-servicios-adicionales p { font-size: 1rem; }
+
+  /* sección nosotros: columnas adaptativas */
+  .acerca-estadisticas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .acerca-valores {
+    grid-template-columns: 1fr;
+  }
+
+  /* contacto: prevenir ancho fijo, inputs 100% */
+  .contacto_contenido {
+    grid-template-columns: 1fr;
+    padding: 18px 12px;
+  }
+  .contacto_titulo { max-width: 100%; height: auto; padding: 20px; border-radius: 30px; }
+  .info_contacto { width: 100%; padding: 24px; border-radius: 30px; box-shadow: none; }
+
+  form { width: 100%; gap: 12px; }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: none;
+  }
+  button {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  /* footer: una columna */
+  .footer-container { grid-template-columns: 1fr; gap: 18px; padding: 20px 6%; }
+  .footer-logo { justify-content: center; }
+  .footer-social { justify-content: center; gap: 12px; }
+  .footer-desc { text-align: center; }
+
+  /* legibilidad táctil */
+  a, button { -webkit-tap-highlight-color: rgba(0,0,0,0.05); }
+}
+
+/* =====================================
+   RESPONSIVE: CELULARES MUY PEQUEÑOS
+   (pantallas <= 420px, iPhone SE, etc.)
+   ===================================== */
+@media (max-width: 420px) {
+  /* header compacto */
+  header { padding: 10px 12px; }
+  .logo_header h1 { font-size: 1.25rem; }
+  .logo_header p  { font-size: 0.85rem; }
+
+  header .navbar ul li a { font-size: 0.95rem; padding: 6px 8px; }
+
+  /* banner más pequeño */
+  .contenido_banner h1 { font-size: 1.35rem; }
+  .contenido_banner h3 { font-size: 0.92rem; }
+
+  .imagenes_banner img { max-height: 200px; }
+
+  /* servicios: compactos */
+  .servicio-contenido h3 { font-size: 1rem; }
+  .servicio-contenido p { font-size: 0.95rem; }
+  .servicio-card img { height: 150px; }
+
+  /* Acerca: tamaño textos */
+  .acerca-encabezado h1 { font-size: 1.6rem; }
+  .acerca-encabezado h2 { font-size: 1.05rem; }
+
+  /* contacto: inputs y botones más grandes táctilmente */
+  input, select, textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+  button {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  /* footer: textos reducidos */
+  .footer-bottom { font-size: 0.85rem; }
+  .footer-col h3 { font-size: 1rem; }
 }
